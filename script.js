@@ -7,7 +7,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
  
@@ -27,8 +26,8 @@ function generatePassword(){
     numeric = window.confirm("Any Numberic?");
     upperLetter = window.confirm("Any Upperletter");
     lowerLetter = window.confirm("Any Lowerletter?")
-
-    if(numeric || upperLetter || lowerLetter){
+    specialLetter = window.confirm ("Any Spcial Letter");
+    if(numeric || upperLetter || lowerLetter || specialLetter){
       validPasswordType = true;
     }else{
       alert("Please select at least one type of passowrd");
@@ -49,13 +48,16 @@ function generatePassword(){
   if(lowerLetter){
     password += lowerList;
   }
-  if (special){
+  if (specialLetter){
     passwordType += specialList;
   }
 
-  
+  password = "";
+  for(var i = 0; i < passwordLength; i++){
+    password += passwordType.charAt(Math.floor(Math.random() * (passwordLength)));
+  }
 
-   
-   
+  return password;
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
