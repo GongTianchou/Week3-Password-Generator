@@ -10,16 +10,18 @@ function writePassword() {
 
 }
 
+ 
 function generatePassword(){
   var passwordLength = 0;
   while(passwordLength <8 || passwordLength >128){
   passwordLength = prompt("Please enter the password length between 8 and 128");
   }
-  
+
   var validPasswordType = false;
   var numeric = false;
   var upperLetter = false;
   var lowerLetter = false;
+  var special = false;
 
   while(!validPasswordType){
     numeric = window.confirm("Any Numberic?");
@@ -32,15 +34,26 @@ function generatePassword(){
       alert("Please select at least one type of passowrd");
     }
   }
-   var numericList = "0123456789"
+   var numericList = "0123456789";
+   var specialList =  " !#%&'()*,\-./:;?@[\]_{}]";
    var upperList = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z";
    var lowerList = "a b c d e f g h i j k l m n o p q r s t u v w x y z";
-   var PasswordType = "";
+   var passwordType = "";
 
- } if ()
+ } if(numeric){
+   passwordType += numericList;
+ }
+  if(upperList){
+    passwordType += upperList;
+  }
+  if(lowerLetter){
+    password += lowerList;
+  }
+  if (special){
+    passwordType += specialList;
+  }
 
-
-
+  
 
    
    
