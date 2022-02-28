@@ -16,4 +16,4 @@ Made with ❤️ by Tianchou Gong
 https://gongtianchou.github.io/Week3-Password-Generator/
 ## Screenshot
 
-![screenshot](./screenshot.png)
+![screenshot](./screenshot.PNG)
