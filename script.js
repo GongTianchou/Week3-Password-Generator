@@ -11,10 +11,16 @@ function writePassword() {
 
  
 function generatePassword(){
-  var passwordLength = 0;
-  while(passwordLength <8 || passwordLength >128){
-  passwordLength = prompt("Please enter the password length between 8 and 128");
-  }
+  //var passwordLength = 0;
+  //while(passwordLength <8 || passwordLength >128){
+ // passwordLength = prompt("Please enter the password length between 8 and 128");
+  //}
+  
+  var passwordLength = prompt("Please enter the password length between 8 and 128");
+  if(passwordLength < 8 || passwordLength > 128) {
+  alert('Please input proper password length');
+  return
+}
 
   var validPasswordType = false;
   var numeric = false;
