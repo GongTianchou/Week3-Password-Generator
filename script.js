@@ -1,6 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var 
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -9,25 +9,25 @@ function writePassword() {
   passwordText.value = password;
 
 }
+
 function generatePassword(){
   var passwordLength = 0;
-  var password = "";
-  while( passwordLength <8 || passwordLength >128){
+  while(passwordLength <8 || passwordLength >128){
   passwordLength = prompt("Please enter the password length between 8 and 128");
   }
 }
   var validPasswordType = false;
   var numeric = true;
   var upperLetter = true;
-  var lowerLetter = ture;
+  var lowerLetter = true;
 
   while(!validPasswordType){
-    numeric = alert("Any Numberic?");
-    upperLetter = alert("Any Upperletter");
-    lowerLetter = alert("Any Lowerletter?")
+    numeric = window.confirm("Any Numberic?");
+    upperLetter = window.confirm("Any Upperletter");
+    lowerLetter = window.confirm("Any Lowerletter?")
 
     if(numeric || upperLetter || lowerLetter){
-      validPasswordType = ture;
+      validPasswordType = true;
     }else{
       alert("Please select at least one type of passowrd");
     }
@@ -37,7 +37,9 @@ function generatePassword(){
    var lowerList = "a b c d e f g h i j k l m n o p q r s t u v w x y z";
    var PasswordType = "";
 
-   
+
+
+
    
    
 // Add event listener to generate button
