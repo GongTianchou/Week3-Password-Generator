@@ -15,11 +15,11 @@ function generatePassword(){
   while(passwordLength <8 || passwordLength >128){
   passwordLength = prompt("Please enter the password length between 8 and 128");
   }
-}
+  
   var validPasswordType = false;
-  var numeric = true;
-  var upperLetter = true;
-  var lowerLetter = true;
+  var numeric = false;
+  var upperLetter = false;
+  var lowerLetter = false;
 
   while(!validPasswordType){
     numeric = window.confirm("Any Numberic?");
@@ -36,6 +36,8 @@ function generatePassword(){
    var upperList = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z";
    var lowerList = "a b c d e f g h i j k l m n o p q r s t u v w x y z";
    var PasswordType = "";
+
+ } if ()
 
 
 
