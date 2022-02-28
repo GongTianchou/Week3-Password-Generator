@@ -1,6 +1,8 @@
 # Week3-Password-Generator
 ## Purpose
+```
 Build up a password generator 
+```
 ## Built with
 ```
 * HTML
